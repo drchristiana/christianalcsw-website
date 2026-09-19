@@ -8,6 +8,63 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+  .form-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    padding: 2.3rem;
+  }
+  .form-field { margin-bottom: 1.3rem; }
+  .form-field label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 0.4rem;
+  }
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid var(--line);
+    background: var(--sand);
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--ink);
+  }
+  .form-field textarea { min-height: 120px; resize: vertical; }
+  .form-field input:focus,
+  .form-field select:focus,
+  .form-field textarea:focus {
+    outline: none;
+    border-color: var(--blue);
+  }
+  .conditional-block {
+    display: none;
+    border-left: 3px solid var(--gold);
+    padding-left: 1.1rem;
+    margin: 1.3rem 0;
+  }
+  .conditional-block.active { display: block; }
+  .form-submit {
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-family: inherit;
+  }
+  .newsletter-box {
+    background: var(--ink);
+    color: var(--ivory);
+    padding: 2.6rem;
+    text-align: center;
+  }
+  .newsletter-box h3 { color: var(--white); margin-bottom: 0.5rem; }
+  .newsletter-box p { color: rgba(255,255,255,0.75); margin-bottom: 1.4rem; }
+  .newsletter-embed iframe { width: 100%; max-width: 480px; height: 145px; border: none; background: transparent; margin: 0 auto; display: block; }
+</style>
 </head>
 <body>
 
@@ -38,14 +95,14 @@
     <div class="wrap">
       <span class="eyebrow">Contact</span>
       <h1>Let&rsquo;s start the conversation.</h1>
-      <p class="lede">Whether you&rsquo;re booking a therapy intake, a SAP evaluation, or a speaking engagement, the fastest way to reach Dr. Christy is by email.</p>
+      <p class="lede">Whether you&rsquo;re reserving a book, booking a service, or just have a question, fill out the form below and you&rsquo;ll hear back by email.</p>
     </div>
   </section>
 
   <section class="section-tight">
     <div class="wrap grid-2">
       <div>
-        <h3>Email</h3>
+        <h3>Direct Email</h3>
         <p><a href="mailto:info@christianalcsw.com" style="color:var(--blue-deep); font-weight:600; font-size:1.15rem;">info@christianalcsw.com</a></p>
 
         <h3 style="margin-top:2.2rem;">Location</h3>
@@ -60,15 +117,89 @@
         </div>
       </div>
 
-      <div class="card" style="border:1px solid var(--line); padding:2.3rem;">
-        <h3>What to Include in Your Email</h3>
-        <p style="color:var(--ink-soft); font-size:0.95rem;">A quick note with the following helps get you scheduled faster:</p>
-        <ul style="padding-left:1.1rem; color:var(--ink-soft);">
-          <li style="margin-bottom:0.6rem;">What you&rsquo;re reaching out about &mdash; therapy intake, SAP evaluation, or a workshop/speaking request</li>
-          <li style="margin-bottom:0.6rem;">Your general availability</li>
-          <li style="margin-bottom:0.6rem;">For SAP evaluations: the DOT agency you&rsquo;re regulated by</li>
-          <li style="margin-bottom:0.6rem;">For workshops: your organization and audience size</li>
-        </ul>
+      <div class="form-card">
+        <h3 style="margin-bottom:1.4rem;">Send a Message</h3>
+
+        <!-- IMPORTANT: replace YOUR_FORM_ID below with your real Formspree endpoint -->
+        <form action="https://formspree.io/f/xgavvbwy" method="POST">
+
+          <div class="form-field">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-field">
+            <label for="reason">What are you reaching out about?</label>
+            <select id="reason" name="reason" onchange="showConditional(this.value)" required>
+              <option value="">Select one&hellip;</option>
+              <option value="Reserve a Book/Bundle">Reserve a Book or Bundle</option>
+              <option value="Book a Service">Book a Service</option>
+              <option value="General Question">General Question</option>
+            </select>
+          </div>
+
+          <!-- Reserve a Book fields -->
+          <div class="conditional-block" id="block-reserve">
+            <div class="form-field">
+              <label for="bundle">Which bundle?</label>
+              <select id="bundle" name="bundle">
+                <option value="Workbook + Journal ($23.99)">Workbook + Journal ($23.99)</option>
+                <option value="Pick Any Book + Coloring Book ($19.99)">Pick Any Book + Coloring Book ($19.99)</option>
+                <option value="Complete Collection ($32.99)">The Complete Collection ($32.99)</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="quantity">Quantity</label>
+              <input type="number" id="quantity" name="quantity" min="1" value="1">
+            </div>
+            <div class="form-field">
+              <label for="shipping">Shipping Address</label>
+              <textarea id="shipping" name="shipping_address" placeholder="Street, City, State, ZIP"></textarea>
+            </div>
+          </div>
+
+          <!-- Book a Service fields -->
+          <div class="conditional-block" id="block-service">
+            <div class="form-field">
+              <label for="service-type">Service Type</label>
+              <select id="service-type" name="service_type">
+                <option value="Therapy Intake">Therapy Intake</option>
+                <option value="SAP Evaluation">SAP Evaluation</option>
+                <option value="Speaking or Workshop">Speaking or Workshop</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="availability">Preferred Availability</label>
+              <input type="text" id="availability" name="availability" placeholder="e.g. weekday mornings, next two weeks">
+            </div>
+          </div>
+
+          <!-- General message, always shown -->
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Add any details here"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary form-submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-ink center" style="padding-top:0;">
+    <div class="wrap">
+      <div class="newsletter-box">
+        <h3>Get Book Updates</h3>
+        <p>Be the first to know when new titles go live, bundles open for order, and events are announced.</p>
+        <div class="newsletter-embed">
+          <!-- Substack embed: replace socialworkeroffduty with your publication's subdomain if different -->
+          <iframe src="https://socialworkeroffduty.substack.com/embed" frameborder="0" scrolling="no"></iframe>
+        </div>
       </div>
     </div>
   </section>
@@ -119,5 +250,16 @@
   </div>
 </footer>
 <script src="main.js"></script>
+<script>
+  function showConditional(value) {
+    document.getElementById('block-reserve').classList.remove('active');
+    document.getElementById('block-service').classList.remove('active');
+    if (value === 'Reserve a Book/Bundle') {
+      document.getElementById('block-reserve').classList.add('active');
+    } else if (value === 'Book a Service') {
+      document.getElementById('block-service').classList.add('active');
+    }
+  }
+</script>
 </body>
 </html>
