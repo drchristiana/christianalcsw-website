@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop Inner Solutions | Dr. Christiana Redeaux</title>
+<meta name="description" content="Hats, totes, and mugs from Shop Inner Solutions, everyday reminders inspired by For the Days You Can&#39;t Breathe by Dr. Christiana Redeaux, LCSW-S.">
+<link rel="canonical" href="https://christianalcsw.com/shop.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dr. Christiana Redeaux">
+<meta property="og:title" content="Shop Inner Solutions | Dr. Christiana Redeaux">
+<meta property="og:description" content="Hats, totes, and mugs from Shop Inner Solutions, everyday reminders inspired by For the Days You Can&#39;t Breathe by Dr. Christiana Redeaux, LCSW-S.">
+<meta property="og:url" content="https://christianalcsw.com/shop.html">
+<meta property="og:image" content="https://christianalcsw.com/shop-hat.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ---- Shop-specific styles (scoped to this page) ---- */
+  .shop-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .shop-card:hover { transform: translateY(-4px); box-shadow: 0 18px 34px -22px rgba(31,58,77,0.35); }
+  .shop-cover {
+    position: relative;
+    background: var(--sand);
+    padding: 1.75rem 1.75rem 0;
+  }
+  .shop-cover img { max-width: 62%; margin: 0 auto; box-shadow: 0 20px 40px -18px rgba(31,58,77,0.4); }
+  .shop-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: var(--ink);
+    color: var(--ivory);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.35em 0.7em;
+  }
+  .shop-badge.live { background: var(--gold); color: var(--ink); }
+  .shop-body { padding: 1.6rem 1.75rem 1.9rem; display: flex; flex-direction: column; flex: 1; }
+  .shop-body h3 { margin-bottom: 0.3rem; }
+  .shop-tagline { color: var(--ink-soft); font-size: 0.92rem; margin-bottom: 1.1rem; }
+  .shop-price { font-family: var(--font-display); font-size: 1.6rem; font-weight: 600; margin-bottom: 1rem; }
+  .shop-body .btn { margin-top: auto; justify-content: center; width: 100%; }
+  .btn-disabled {
+    background: var(--sand);
+    color: var(--ink-soft);
+    border-color: var(--line);
+    cursor: default;
+    pointer-events: none;
+  }
+  .bundle-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    padding: 2rem 1.9rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .bundle-card h3 { margin-bottom: 0.35rem; }
+  .bundle-includes { color: var(--ink-soft); font-size: 0.85rem; font-style: italic; margin-bottom: 1rem; }
+  .bundle-price { font-family: var(--font-display); font-size: 1.9rem; font-weight: 600; margin-bottom: 1.3rem; }
+  .bundle-card .btn { justify-content: center; width: 100%; margin-top: auto; }
+  .shop-note {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="wordmark">
+      <span class="name">Dr. Christiana Redeaux</span>
+      <span class="biz">Inner Solutions, LLC</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="speaking.html">Speaking &amp; Media</a></li>
+      <li><a href="platform.html">Pageant Platform</a></li>
+      <li><a href="books.html">Books</a></li>
+      <li><a href="shop.html" aria-current="page">Shop</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="wrap center">
+      <span class="eyebrow">Inner Solutions</span>
+      <h1 style="max-width:none;">Shop Inner Solutions</h1>
+      <p class="lede" style="margin:0 auto;">Hats, totes, and mugs from Inner Solutions. Looking for the books? <a href="books.html" style="color:var(--blue-deep); font-weight:600;">They&rsquo;re here.</a></p>
+    </div>
+  </section>
+
+  <!-- ===== SHOP INNER SOLUTIONS ===== -->
+  <section class="section-tight bg-sand">
+    <div class="wrap center">
+      <h2 style="margin-bottom:1rem;">Everyday Pieces</h2>
+      <p class="lede" style="margin:0 auto 2.5rem;">A few small, wearable reminders that carry the same message as the books. Simple, steady, and made for daily life.</p>
+
+      <div class="grid-3">
+
+        <div class="shop-card">
+          <div class="shop-cover">
+            <img src="shop-mug.jpg" alt="Powered by Coffee and My Meds mug">
+          </div>
+          <div class="shop-body">
+            <h3>Powered by Coffee and My Meds Mug</h3>
+            <p class="shop-tagline">A little humor for the days that need it</p>
+            <div class="shop-price">$11.99</div>
+            <a href="https://shop-inner-solutions.printify.me/product/32206195" target="_blank" rel="noopener" class="btn btn-primary">Shop Now</a>
+          </div>
+        </div>
+
+        <div class="shop-card">
+          <div class="shop-cover">
+            <img src="shop-hat.jpg" alt="Choosing Another Day embroidered dad cap">
+          </div>
+          <div class="shop-body">
+            <h3>Choosing Another Day Dad Cap</h3>
+            <p class="shop-tagline">A soft, low-profile everyday cap</p>
+            <div class="shop-price">$22.50</div>
+            <a href="https://shop-inner-solutions.printify.me/product/32206053" target="_blank" rel="noopener" class="btn btn-primary">Shop Now</a>
+          </div>
+        </div>
+
+        <div class="shop-card">
+          <div class="shop-cover">
+            <img src="shop-tote.jpg" alt="Choosing to Breathe canvas tote bag">
+          </div>
+          <div class="shop-body">
+            <h3>Choosing to Breathe Tote Bag</h3>
+            <p class="shop-tagline">A quiet reminder carried with you</p>
+            <div class="shop-price">$19.99</div>
+            <a href="https://shop-inner-solutions.printify.me/product/32205948" target="_blank" rel="noopener" class="btn btn-primary">Shop Now</a>
+          </div>
+        </div>
+
+      </div>
+      <p class="shop-note">Available now through Printify.</p>
+    </div>
+  </section>
+
+  <section class="bg-ink center">
+    <div class="wrap">
+      <h2>Stay updated on Inner Solutions&rsquo; latest projects</h2>
+      <a href="contact.html" class="btn btn-ghost on-dark">Get in Touch &rarr;</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="wordmark">
+        <span class="name">Dr. Christiana Redeaux</span>
+        <span class="biz">Inner Solutions, LLC</span>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <a href="mailto:info@christianalcsw.com">info@christianalcsw.com</a>
+          <p>Fort Worth, Texas</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="services.html">Services</a>
+          <a href="books.html">Books</a>
+          <a href="shop.html">Shop</a>
+          <a href="platform.html">Pageant Platform</a>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Along</h4>
+          <div class="social-row">
+            <a href="mailto:info@christianalcsw.com" aria-label="Email"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M3 6l9 7 9-7"/></svg></a>
+            <a href="https://www.instagram.com/drchristianalcsw/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+            <a href="https://www.facebook.com/christiana.redeaux/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 3h-2a5 5 0 0 0-5 5v2H6v4h2v7h4v-7h3l1-4h-4V8a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://www.linkedin.com/in/christianaredeaux/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/><path d="M10 21v-7a3 3 0 0 1 6 0v7M10 9v12"/></svg></a>
+            <a href="https://socialworkeroffduty.substack.com" target="_blank" rel="noopener" aria-label="Substack"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Inner Solutions, LLC. All rights reserved.</span>
+      <span>LCSW-S &middot; SAP &middot; CEAP &middot; C-DBT</span>
+    </div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
