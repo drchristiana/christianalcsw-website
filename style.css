@@ -473,3 +473,17 @@ section { padding: clamp(3.5rem, 8vw, 6.5rem) 0; }
 .mt-0 { margin-top: 0; }
 .stack { display: flex; flex-direction: column; gap: 0.4rem; }
 .divider { height: 1px; background: var(--line); border: none; margin: 2.5rem 0; }
+
+/* Press strip */
+.press-strip { border-bottom: 1px solid rgba(90,127,165,0.18); padding: 1.1rem 0; text-align: center; }
+.press-strip p { margin: 0; font-size: 0.95rem; color: var(--ink-soft); }
+.press-strip a { color: var(--blue-deep); font-weight: 600; text-decoration: none; }
+.press-strip a:hover, .press-strip a:focus-visible { text-decoration: underline; }
+
+/* Homepage review on dark band */
+.home-praise { margin: 2rem 0 0; padding-left: 1.2rem; border-left: 2px solid var(--gold); font-family: var(--font-display); font-style: italic; font-size: 1.15rem; line-height: 1.5; color: rgba(250,247,241,0.9); max-width: 34em; }
+.home-praise cite { display: block; margin-top: 0.6rem; font-family: var(--font-body); font-style: normal; font-size: 0.8rem; font-weight: 600; color: var(--gold); }
+
+/* Crisis line in footer */
+.footer-crisis { font-size: 0.85rem; color: rgba(250,247,241,0.8); margin: 0 0 1.2rem; }
+.footer-crisis a { color: var(--gold); font-weight: 600; }
