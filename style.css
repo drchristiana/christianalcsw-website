@@ -128,6 +128,8 @@ section { padding: clamp(3.5rem, 8vw, 6.5rem) 0; }
   border-bottom: 1px solid var(--line);
 }
 .site-nav .wrap {
+  max-width: 1320px;
+  gap: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -139,6 +141,7 @@ section { padding: clamp(3.5rem, 8vw, 6.5rem) 0; }
   line-height: 1.1;
 }
 .wordmark .name {
+  white-space: nowrap;
   font-family: var(--font-display);
   font-style: italic;
   font-size: 1.35rem;
@@ -157,7 +160,7 @@ section { padding: clamp(3.5rem, 8vw, 6.5rem) 0; }
 }
 .nav-links {
   display: flex;
-  gap: clamp(1.1rem, 1.8vw, 2.1rem);
+  gap: clamp(0.9rem, 1.35vw, 2.1rem);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -194,7 +197,7 @@ section { padding: clamp(3.5rem, 8vw, 6.5rem) 0; }
   margin: 5px 0;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1260px) {
   .nav-toggle { display: block; }
   .nav-links {
     position: absolute;
