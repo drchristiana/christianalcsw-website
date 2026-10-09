@@ -146,7 +146,7 @@
             <select id="reason" name="reason" onchange="showConditional(this.value)" required>
               <option value="">Select one&hellip;</option>
               <option value="Reserve a Book/Bundle">Reserve a Book or Bundle</option>
-              <option value="Book a Service">Book a Service</option>
+              <option value="Book a Service">Book a Workshop or Talk</option>
               <option value="General Question">General Question</option>
             </select>
           </div>
@@ -173,16 +173,9 @@
 
           <!-- Book a Service fields -->
           <div class="conditional-block" id="block-service">
+            <input type="hidden" name="service_type" value="Speaking or Workshop">
             <div class="form-field">
-              <label for="service-type">Service Type</label>
-              <select id="service-type" name="service_type">
-                <option value="Clinical Supervision">Clinical Supervision</option>
-                <option value="SAP Evaluation">SAP Evaluation</option>
-                <option value="Speaking or Workshop">Speaking or Workshop</option>
-              </select>
-            </div>
-            <div class="form-field">
-              <label for="availability">Preferred Availability</label>
+              <label for="availability">Event date or preferred availability</label>
               <input type="text" id="availability" name="availability" placeholder="e.g. weekday mornings, next two weeks">
             </div>
           </div>
