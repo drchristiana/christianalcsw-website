@@ -71,6 +71,10 @@
   .bundle-includes { color: var(--ink-soft); font-size: 0.85rem; font-style: italic; margin-bottom: 1rem; }
   .bundle-price { font-family: var(--font-display); font-size: 1.9rem; font-weight: 600; margin-bottom: 1.3rem; }
   .bundle-card .btn { justify-content: center; width: 100%; margin-top: auto; }
+  .bundle-ship { font-size: 0.85rem; color: var(--ink-soft); margin: -0.6rem 0 1.2rem; }
+  .review-cta { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--line); text-align: center; }
+  .review-cta p { color: var(--ink-soft); max-width: 36em; margin: 0.5rem auto 1.4rem; }
+  .review-cta .btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; }
   .shop-note {
     font-size: 0.85rem;
     color: var(--ink-soft);
@@ -163,14 +167,14 @@
 
         <div class="shop-card">
           <div class="shop-cover">
-            <span class="shop-badge">Coming Soon</span>
+            <span class="shop-badge live">Available Now</span>
             <img loading="lazy" src="coloring-cover.jpg" alt="For the Days You Can't Breathe: A Calming Coloring and Activity Book">
           </div>
           <div class="shop-body">
             <h3>The Coloring Book</h3>
             <p class="shop-tagline">A calming coloring and activity book</p>
             <div class="shop-price">$9.99</div>
-            <span class="btn btn-disabled">Coming Soon</span>
+            <a href="https://a.co/d/00SYeS4l" target="_blank" rel="noopener" class="btn btn-primary">Available on Amazon</a>
           </div>
         </div>
 
@@ -190,6 +194,7 @@
           <h3>Workbook + Journal</h3>
           <p class="bundle-includes">Skills to cope, and a place to reflect</p>
           <div class="bundle-price">$23.99</div>
+          <p class="bundle-ship">Signed by the author. Ships in about 4 weeks.</p>
           <a href="https://buy.stripe.com/28E8wR2vOeZ4dXz7Hb7ss00" target="_blank" rel="noopener" class="btn btn-primary">Buy Now</a>
         </div>
 
@@ -308,6 +313,15 @@
           &ldquo;The level of care explanations, and the explanations about harm to self and others, are really strong.&rdquo;
           <cite>Stephanie Taylor, MSN, APRN, PMHNP-BC</cite>
         </blockquote>
+      </div>
+      <div class="review-cta">
+        <h3>Read it? Leave a review</h3>
+        <p>If you&rsquo;ve worked through some pages, a quick review on Amazon helps someone else find these books on the days they need them.</p>
+        <div class="btns">
+          <a href="https://www.amazon.com/review/create-review?asin=B0HKG7NHB1" target="_blank" rel="noopener" class="btn btn-primary">Review the Workbook</a>
+          <a href="https://www.amazon.com/review/create-review?asin=B0HJHPN7CQ" target="_blank" rel="noopener" class="btn btn-ghost">Review the Journal</a>
+        </div>
+        <p style="margin-top:1.6rem;">Bought a bundle from this website? <a href="mailto:info@christianalcsw.com?subject=My%20review%20of%20For%20the%20Days%20You%20Can%27t%20Breathe&amp;body=What%20I%20bought%3A%0A%0AWhat%20I%20thought%3A%0A%0AName%20to%20show%20with%20my%20review%20(or%20%22anonymous%22)%3A%0A%0AIs%20it%20okay%20to%20share%20this%20on%20the%20website%20and%20social%20media%3F%20(yes%2Fno)%3A" style="color:var(--blue-deep); font-weight:600;">Send me your review here &rarr;</a></p>
       </div>
     </div>
   </section>
