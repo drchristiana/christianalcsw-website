@@ -498,3 +498,8 @@ section { padding: clamp(3.5rem, 8vw, 6.5rem) 0; }
 /* Crisis line in footer */
 .footer-crisis { font-size: 0.85rem; color: rgba(250,247,241,0.8); margin: 0 0 1.2rem; }
 .footer-crisis a { color: var(--gold); font-weight: 600; }
+
+/* Paperback + Kindle buttons on a book card */
+.format-label { font-size: 0.8rem; letter-spacing: 0.04em; margin: 0 0 0.6rem; opacity: 0.85; }
+.btn-pair { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.btn-pair .btn { flex: 1 1 8.5rem; justify-content: center; padding: 0.9em 1.2em; }
